@@ -10,10 +10,10 @@
         }
     ],
     "advert": [
-        { "img": "/static/images/banner1.jpg", "url": "#", "type": 0 },
-        { "img": "/static/images/banner2.jpg", "url": "#", "type": 0 },
-        { "img": "/static/images/banner3.jpg", "url": "#", "type": 0 },
-        { "img": "/static/images/banner4.jpg", "url": "#", "type": 0 }
+        { "img": "/static/images/banner1.jpg", "url": "#/productlist", "type": 0 },
+        { "img": "/static/images/banner2.jpg", "url": "#/productlist", "type": 0 },
+        { "img": "/static/images/banner3.jpg", "url": "#/productlist", "type": 0 },
+        { "img": "/static/images/banner4.jpg", "url": "#/productlist", "type": 0 }
     ],
     "category": [{
             "title": "天猫",
@@ -70,9 +70,9 @@
             "type": 0
         },
         {
-            "title": "天猫超市",
-            "img": "/static/images/category/5.png",
-            "url": "",
+            "title": "分类",
+            "img": "/static/images/category/6.png",
+            "url": "productlist",
             "type": 0
         }
     ],

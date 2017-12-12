@@ -45,10 +45,10 @@
             <!--分类-->
             <div class="category"  v-if="data!=null">
                 <div v-for="item in data.category">
-                    <a :href="item.url">
+                    <router-link :to="item.url" >
                         <div :style="'background-image:url('+item.img+')'"></div>
                         <span>{{item.title}}</span>
-                    </a>
+                    </router-link>
                 </div>
             </div>
             <!--头条-->

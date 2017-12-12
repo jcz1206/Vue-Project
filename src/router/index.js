@@ -14,6 +14,8 @@ import FoodDetail from '@/components/old/FoodDetail'
 import newIndex from '@/components/index'
 import regist from '@/components/regist'
 import newLogin from '@/components/login'
+import productlist from '@/components/product/productlist'
+// import category from '@/components/product/category'
 
 Vue.use(Router)
 
@@ -33,6 +35,16 @@ export default new Router({
             name: 'newLogin',
             component: newLogin
         },
+        {
+            path: '/productlist',
+            name: 'productlist',
+            component: productlist
+        },
+        // {
+        //     path: '/category',
+        //     name: 'category',
+        //     component: category
+        // },
         {
             path: '/index',
             name: 'Index',
