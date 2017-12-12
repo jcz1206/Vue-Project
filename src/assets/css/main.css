@@ -4,6 +4,8 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
 }
 
 footer div {
@@ -168,6 +170,7 @@ header .search {
 
 .infoList {
   height: 24px;
+  margin: 0;
 }
 
 .trumpt {

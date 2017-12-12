@@ -20,6 +20,8 @@
     
     footer {
         @include flex-row;
+        position: fixed;
+        bottom: 0;
         // display: inline-flex;
         // flex-direction: row;
         // width: 100%;
@@ -187,6 +189,7 @@
     
     .infoList {
         height: 24px;
+        margin: 0;
     }
     
     //头条样式end
