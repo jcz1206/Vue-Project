@@ -5,9 +5,10 @@
             <header>
                 <div class="header-wrap">
                     <form>
-                        <span>南京站
+                        <div class="site">南京站
                             <i class="icon iconfont icon-xiala"></i>
-                        </span>
+                        </div>
+                        <i class="icon iconfont icon-sousuo"></i>
                         <input type="search" class="search" @search="search()">
                     </form>
                 </div>
@@ -77,6 +78,7 @@
     </div>
 </template>
 <script>
+import '@/assets/css/main.scss'
 import "../assets/lib/swiper-4.0.5/css/swiper.css";
 import headbar from "@/components/headbar.vue";
 import footbar from "@/components/footbar.vue";
@@ -201,7 +203,7 @@ export default {
     //   $('#share-3').share();
     // }
     getData: function() {
-      this.$http.get("/static/test.json").then(
+      this.$http.get("/static/json/test.json").then(
         response => {
           this.data = response.data;
           this.$nextTick(function() {
