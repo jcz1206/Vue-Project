@@ -92,7 +92,7 @@ header {
         }
         span {
             color: $fontColor;
-            font-size: 12px;
+            // font-size: 12px;
         }
     }
 }
@@ -195,6 +195,7 @@ header {
     background-color: #faf7bb;
     width: 100%;
     z-index: 4;
+    height: 30px;
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
@@ -203,10 +204,11 @@ header {
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    align-items: center; //flex纵轴居中
     .dsmall {
         padding: 0 2px 0 4px;
-        margin-top: 3px;
-        height: 22px;
+        // margin-top: 3px;
+        // height: 22px;
         text-align: center;
         box-sizing: border-box;
         i {
@@ -214,7 +216,7 @@ header {
         }
     }
     .gg2 {
-        height: 28px;
+        height: 30px;
         overflow: hidden;
         white-space: nowrap;
         ul {
@@ -231,7 +233,7 @@ header {
                 text-align: center;
                 display: inline-block;
                 p {
-                    font-size: 16px;
+                    // font-size: 16px;
                     display: inline-block;
                     padding: 0;
                     height: 28px;

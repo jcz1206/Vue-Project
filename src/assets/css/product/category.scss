@@ -47,6 +47,10 @@
                 color: #fff;
                 display: inline-block;
                 border-right: solid 1px #b50707;
+                &.on {
+                    background-color: #ab2520;
+                    font-weight: bolder;
+                }
             }
         }
         // .nav {
@@ -89,5 +93,48 @@
         color: #fff;
         margin-top: 5px;
         display: block;
+    }
+}
+
+.flter {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 40px;
+        align-items: center; //flex纵轴居中
+        color: $fontColor;
+        border-bottom: solid 1px #ccc;
+        @include flex-row();
+        li {
+            width: 20%;
+            text-align: center;
+        }
+    }
+    .icon-down-small {
+        height: 12px;
+        display: inline-block;
+        width: 10px;
+        margin-left: 4px;
+        &:before,
+        &:after {
+            content: "";
+            font-style: normal;
+            border: solid 5px #b6b6b6;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            width: 0;
+            height: 0;
+            display: block;
+        }
+        &:before {
+            border-top-color: transparent;
+            border-top: none;
+        }
+        &:after {
+            border-bottom-color: transparent;
+            border-bottom: none;
+            margin-top: 2px;
+        }
     }
 }

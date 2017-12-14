@@ -1,23 +1,5 @@
 <template>
-  <div>
-    <div  class="head">
-        <div class="categorylist">
-            <div class="nav2">
-                <a v-for="item in data.category" @click="onClickMe(item.id)">{{item.catename}}</a>
-            </div>
-        </div>
-        <div class="search"><i class="icon iconfont icon-sousuo"></i></div>
-    </div>
-    <div class="flter">
-      <ul>
-        <li>分类<i class="icon iconfont icon-xiangxiajiantou"></i></li>
-        <li>品牌<i class="icon iconfont icon-xiangxiajiantou"></i></li>
-        <li>销售<i class="icon-down-small"></i></li>
-        <li>价格<i class="icon-down-small"></i></li>
-        <li>更多</li>
-      </ul>
-    </div>
-  </div>
+
 </template>
 <!--
 <style  lang="scss" scoped rel="stylesheet/scss">

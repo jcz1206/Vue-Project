@@ -12,6 +12,7 @@ import 'bootstrap/css/bootstrap.min.css'
 //将css 放在app前面，css的加载顺序就不会有问题了
 import '@/assets/iconfonts/iconfont.css'
 // import BootstrapVue from 'bootstrap-vue'
+import 'lib-flexible/flexible.js'
 import App from './App'
 import router from './router'
 // import './assets/bootstrap/js/bootstrap.min.js'

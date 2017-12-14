@@ -97,7 +97,6 @@ header .icon-sousuo {
 
 .category > div span {
   color: #666;
-  font-size: 12px;
 }
 
 /* 本例子css */
@@ -189,6 +188,7 @@ header .icon-sousuo {
   background-color: #faf7bb;
   width: 100%;
   z-index: 4;
+  height: 30px;
   display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
@@ -197,12 +197,11 @@ header .icon-sousuo {
   -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .trumpt .dsmall {
   padding: 0 2px 0 4px;
-  margin-top: 3px;
-  height: 22px;
   text-align: center;
   box-sizing: border-box;
 }
@@ -212,7 +211,7 @@ header .icon-sousuo {
 }
 
 .trumpt .gg2 {
-  height: 28px;
+  height: 30px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -233,7 +232,6 @@ header .icon-sousuo {
 }
 
 .trumpt .gg2 ul li p {
-  font-size: 16px;
   display: inline-block;
   padding: 0;
   height: 28px;
