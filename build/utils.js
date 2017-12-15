@@ -27,13 +27,13 @@ exports.cssLoaders = function(options) {
         px2remLoader = {
             loader: 'px2rem-loader',
             options: {
-                // remUnit: 64
+                remUnit: 75
             }
         }
 
     // generate loader string to be used with extract text plugin
     function generateLoaders(loader, loaderOptions) {
-        var loaders = [cssLoader, postcssLoader, px2remLoader]
+        var loaders = [cssLoader, postcssLoader, px2remLoader] //, px2remLoader
         if (loader) {
             loaders.push({
                 loader: loader + '-loader',

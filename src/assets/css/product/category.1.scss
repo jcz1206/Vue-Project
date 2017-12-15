@@ -37,20 +37,16 @@
         // ::-webkit-resizer       两个滚动条的交汇处上用于通过拖动调整元素大小的小控件
         .nav2 {
             white-space: nowrap;
-            font-size: 32px;
             // height: 50px;
             width: auto;
             a {
-                width: 120px;
-                height: 70px;
-                /*px*/
-                line-height: 70px;
-                /*px*/
+                width: 100px;
+                height: 46px;
+                line-height: 46px;
                 text-align: center;
                 color: #fff;
                 display: inline-block;
                 border-right: solid 1px #b50707;
-                /* no*/
                 &.on {
                     background-color: #ab2520;
                     font-weight: bolder;
@@ -81,7 +77,6 @@
             content: "";
             display: block;
             width: 1px;
-            /* no*/
             // margin-top: 20%;
             height: 100%;
             float: left;
@@ -94,7 +89,7 @@
         }
     }
     .icon-sousuo {
-        font-size: 40px;
+        font-size: 26px;
         color: #fff;
         margin-top: 5px;
         display: block;
@@ -102,12 +97,11 @@
 }
 
 .flter {
-    font-size: 28px;
     ul {
         margin: 0;
         padding: 0;
         list-style: none;
-        height: 60px;
+        height: 40px;
         align-items: center; //flex纵轴居中
         color: $fontColor;
         border-bottom: solid 1px #ccc;
@@ -118,15 +112,15 @@
         }
     }
     .icon-down-small {
-        height: 20px;
+        height: 12px;
         display: inline-block;
-        width: 20px;
-        margin-left: 8px;
+        width: 10px;
+        margin-left: 4px;
         &:before,
         &:after {
             content: "";
             font-style: normal;
-            border: solid 10px #b6b6b6;
+            border: solid 5px #b6b6b6;
             border-left-color: transparent;
             border-right-color: transparent;
             width: 0;

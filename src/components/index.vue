@@ -5,9 +5,7 @@
             <header>
                 <div class="header-wrap">
                     <form>
-                        <div class="site">南京站
-                            <i class="icon iconfont icon-xiala"></i>
-                        </div>
+                        <div class="site">南京站<i class="icon iconfont icon-xiala"></i></div>
                         <i class="icon iconfont icon-sousuo"></i>
                         <input type="search" class="search" @search="search()">
                     </form>
@@ -72,13 +70,15 @@
             </div>
             <!--活动-->
             <div>
+              jjh
             </div>
         </div>
         <footbar></footbar>
     </div>
 </template>
 <script>
-import '@/assets/css/main.scss'
+import '@/assets/css/base/common.scss'
+import '@/assets/css/index/main.scss'
 import "../assets/lib/swiper-4.0.5/css/swiper.css";
 import headbar from "@/components/headbar.vue";
 import footbar from "@/components/footbar.vue";
@@ -183,9 +183,9 @@ export default {
     //     }
     };
   },
-  created:{
+  // created:{
 
-  },
+  // },
   computed: {},
   mounted: function() {
       this.getData();
@@ -195,9 +195,9 @@ export default {
     //   // this.scrollTrumpt();
     // });
   },
-  watch:{
+  // watch:{
 
-  },
+  // },
   methods: {
     // share:function(){
     //   $('#share-3').share();

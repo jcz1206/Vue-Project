@@ -22,6 +22,7 @@
 </div>
 </template>
 <script>
+import '@/assets/css/base/common.scss'
 import category from "@/components/product/category.vue";
 export default{
     name:"productlist",
