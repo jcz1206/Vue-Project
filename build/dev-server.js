@@ -25,8 +25,12 @@ var compiler = webpack(webpackConfig)
 
 //myself add
 // var appData = require('../src/components/json/index.json');
-// var apiRoutes = express.Router();
-// app.use('/api', apiRoutes);
+var appData = require('../static/json/test.json');
+var apiRoutes = express.Router();
+apiRoutes.get("/indexjson", function(req, res) {
+    res.json(appData)
+})
+app.use(apiRoutes);
 //myself add end
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {

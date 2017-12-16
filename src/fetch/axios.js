@@ -23,7 +23,7 @@ axios.interceptors.request.use((config) => {
     // alert(config);
     return config;
 }, (error) => {
-    alert("request错误参数");
+    // alert("request错误参数");
     // _.toast("错误参数", 'fail');
     return Promise.reject(error);
 });
@@ -38,7 +38,7 @@ axios.interceptors.response.use((res) => {
     // }
     return res;
 }, (error) => {
-    alert("response错误参数");
+    // alert("response错误参数");
     // _.toast("网络异常", 'fail');
     return Promise.reject(error);
 });

@@ -2,20 +2,22 @@
 <div>
     <category v-on:child-say="listenToMyBoy"></category>
     <!-- =={{cateid}}== -->
-    <div v-for="item in data" v-if="item.cateid==cateid">
+    <!-- <div v-for="item in data" v-if="item.cateid==cateid">
         {{item.spuname}}
-    </div>
-    <div v-for="item in productlist" >
-        <div class="prodimg">tupian</div>
-        <div class="prodcon">
-            <div class="prodname">{{item.spuname}}</div>
-            <!-- <div class="prodname">guige</div> -->
-            <div>
-                <div class="prodprice">
-                    <div>{{item.sku[0].salePrice}}</div>
-                    <div>{{sumStock|item.sku}}</div>
+    </div> -->
+    <div class="prodlist">
+        <div v-for="item in productlist" >
+            <div class="prodimg">tupian</div>
+            <div class="prodcon">
+                <div class="prodname">{{item.spuname}}</div>
+                <!-- <div class="prodname">guige</div> -->
+                <div class="prodbottom">
+                    <div class="prodnumber">
+                        <div class="prodprice">￥{{item.sku[0].salePrice}}</div>
+                        <div class="prodstock">库存：{{item.sku|sumStock}}</div>
+                    </div>
+                    <div class="prodcart"><i class="icon iconfont icon-gouwuchetianjia"></i></div>
                 </div>
-                <div class="prodcart"><i ckass="icon iconfont icon-gouwuchetianjia"></i></div>
             </div>
         </div>
     </div>
@@ -23,6 +25,7 @@
 </template>
 <script>
 import '@/assets/css/base/common.scss'
+import '@/assets/css/product/productlist.scss'
 import category from "@/components/product/category.vue";
 export default{
     name:"productlist",
@@ -36,6 +39,18 @@ export default{
             productlist:[]
         }
     },
+    filters:{
+        sumStock:(skulist)=>{
+            var stock=0;
+            skulist.forEach((sku)=>{
+                stock+=sku.stock;
+            })
+            return stock;
+        }
+    },
+    mounted:function(){        
+        $('.nav2').children('a')[0].dispatchEvent(new Event('click'));
+    },
     methods:{
         listenToMyBoy: cateid=>{
             // console.log(cateid+"====");
@@ -47,6 +62,7 @@ export default{
             this.$http.get("/static/json/products.json").then(
                 response => {
                     this.data = response.data;
+                    this.productlist=[];
                     response.data.forEach((spu)=>{
                         if(spu.cateid==cateid){
                             this.productlist.push(spu);

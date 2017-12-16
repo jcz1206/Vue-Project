@@ -5,7 +5,7 @@
             <header>
                 <div class="header-wrap">
                     <form>
-                        <div class="site">南京站<i class="icon iconfont icon-xiala"></i></div>
+                        <div class="site">南京1站<i class="icon iconfont icon-xiala"></i></div>
                         <i class="icon iconfont icon-sousuo"></i>
                         <input type="search" class="search" @search="search()">
                     </form>
@@ -186,7 +186,6 @@ export default {
   // created:{
 
   // },
-  computed: {},
   mounted: function() {
       this.getData();
     // this.$nextTick(function() {
@@ -203,9 +202,25 @@ export default {
     //   $('#share-3').share();
     // }
     getData: function() {
-      this.$http.get("/static/json/test.json").then(
+
+      // this.$http.get("/indexjson").then(
+      //   response => {
+      //     this.data = response.data;
+      //     this.$nextTick(function() {
+      //       this.swiperTool();
+      //       this.marqueeTool();
+      //       this.scrollTrumpt();
+      //     });
+      //   },
+      //   response => {
+      //     // 响应错误回调
+      //     alert("服务器请求失败");
+      //   }
+      // );
+
+      this.axi.get("/indexjson").then(
         response => {
-          this.data = response.data;
+          this.data = response;
           this.$nextTick(function() {
             this.swiperTool();
             this.marqueeTool();

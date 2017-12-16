@@ -1,6 +1,6 @@
 [{
     "spuid": "c001001",
-    "spuname": "金牛水管",
+    "spuname": "金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管金牛水管",
     "cateid": "c001",
     "sku": [{
         "id": "c001001p001001",
@@ -8,6 +8,7 @@
         "img": "",
         "originPrice": "20.00",
         "salePrice": "16.00",
+        "stock": 10,
         "saleAttr": [{
             "attrId": "a0001",
             "attrName": "颜色",
@@ -25,6 +26,7 @@
         "img": "",
         "originPrice": "20.00",
         "salePrice": "18.00",
+        "stock": 10,
         "saleAttr": [{
             "attrId": "a0001",
             "attrName": "颜色",
@@ -47,6 +49,7 @@
         "img": "",
         "originPrice": "20.00",
         "salePrice": "16.00",
+        "stock": 10,
         "saleAttr": [{
             "attrId": "a0001",
             "attrName": "颜色",
@@ -64,6 +67,7 @@
         "img": "",
         "originPrice": "20.00",
         "salePrice": "18.00",
+        "stock": 10,
         "saleAttr": [{
             "attrId": "a0001",
             "attrName": "颜色",
@@ -86,6 +90,7 @@
         "img": "",
         "originPrice": "20.00",
         "salePrice": "16.00",
+        "stock": 10,
         "saleAttr": [{
             "attrId": "a0001",
             "attrName": "颜色",
@@ -103,6 +108,7 @@
         "img": "",
         "originPrice": "20.00",
         "salePrice": "18.00",
+        "stock": 10,
         "saleAttr": [{
             "attrId": "a0001",
             "attrName": "颜色",
