@@ -198,8 +198,12 @@ export default {
 
   // },
   methods: {
-    checkLogin:function(){
-        
+    checkLogin:function(){        
+      if(null==this.cookies.get('session')){
+            this.$router.push({path:'/newlogin'});
+      }else{
+            this.$router.push({path:'/login'});
+      }
     },
     // share:function(){
     //   $('#share-3').share();

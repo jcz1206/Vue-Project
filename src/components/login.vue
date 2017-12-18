@@ -31,7 +31,8 @@ export default {
   },
 
   created: function() {
-    // this.checkLogin();
+    // this.checkLogin();    
+     this.cookies.delete('session');
   },
   methods: {
     checkLogin: function() {
@@ -91,8 +92,9 @@ export default {
           console.log(JSON.stringify(response));
           if(response.result){
             //如果登录成功则保存登录状态并设置有效期
-            // let expireDays = 1000 * 60 * 60 * 24 * 15;
+            let expireDays = 1000 * 60 * 60 * 24 * 15;
             // this.setCookie('session', response.result, expireDays);
+            this.cookies.set('session', response.result, expireDays);
             //跳转
             this.$router.push({path:'/newIndex'});
           }
