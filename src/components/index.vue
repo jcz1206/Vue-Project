@@ -183,9 +183,9 @@ export default {
     //     }
     };
   },
-  // created:{
-
-  // },
+  created:function(){
+    this.checkLogin();
+  },
   mounted: function() {
       this.getData();
     // this.$nextTick(function() {
@@ -198,12 +198,15 @@ export default {
 
   // },
   methods: {
+    checkLogin:function(){
+        
+    },
     // share:function(){
     //   $('#share-3').share();
     // }
     getData: function() {
 
-      // this.$http.get("/indexjson").then(
+      // this.$http.get(staticPath+"/indexjson").then(
       //   response => {
       //     this.data = response.data;
       //     this.$nextTick(function() {
