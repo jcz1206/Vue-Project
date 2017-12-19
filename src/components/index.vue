@@ -183,28 +183,10 @@ export default {
     //     }
     };
   },
-  created:function(){
-    this.checkLogin();
-  },
   mounted: function() {
       this.getData();
-    // this.$nextTick(function() {
-    //   this.swiperTool();
-    //   this.marqueeTool();
-    //   // this.scrollTrumpt();
-    // });
   },
-  // watch:{
-
-  // },
   methods: {
-    checkLogin:function(){        
-      if(null==this.cookies.get('session')){
-            this.$router.push({path:'/newlogin'});
-      }else{
-            this.$router.push({path:'/login'});
-      }
-    },
     // share:function(){
     //   $('#share-3').share();
     // }

@@ -15,6 +15,8 @@ import newIndex from '@/components/index'
 import regist from '@/components/regist'
 import newLogin from '@/components/login'
 import productlist from '@/components/product/productlist'
+import my from '@/components/my/my'
+import setting from '@/components/my/setting'
 // import category from '@/components/product/category'
 
 Vue.use(Router)
@@ -46,6 +48,16 @@ export default new Router({
             path: '/productlist',
             name: 'productlist',
             component: productlist
+        },
+        {
+            path: '/my',
+            name: 'my',
+            component: my
+        },
+        {
+            path: '/setting',
+            name: 'setting',
+            component: setting
         },
         // {
         //     path: '/category',

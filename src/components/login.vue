@@ -32,7 +32,8 @@ export default {
 
   created: function() {
     // this.checkLogin();    
-     this.cookies.delete('session');
+    // this.checkLogin2();   
+    //  this.cookies.delete('session');
   },
   methods: {
     checkLogin: function() {
@@ -40,7 +41,7 @@ export default {
       //cookie操作方法在源码里有或者参考网上的即可
       if (!this.getCookie("session")) {
         //如果没有登录状态则跳转到登录页
-        this.$router.push("/login");
+        ///this.$router.push("/login");
       } else {
         //否则跳转到登录后的页面
         this.$router.push("/");
@@ -48,29 +49,9 @@ export default {
     },
     //登录逻辑
     login: function() {
-      if (this.user.username != "" && this.user.username != "") {
+      if (this.user.username != "" && this.user.password != "") {
         this.toLogin();
       }
-      // this.$store.dispatch('LoginByUsername', this.user).then(() => {
-      //     this.$router.push({ path: '/' }); //登录成功之后重定向到首页
-      //     }).catch(err => {
-      //     this.$message.error(err); //登录失败提示错误
-      //     });
-    },
-    LoginByUsername: function({ commit }, userInfo) {
-      const username = userInfo.username.trim();
-      return new Promise((resolve, reject) => {
-        loginByUsername(username, userInfo.password)
-          .then(response => {
-            const data = response.data;
-            Cookies.set("Token", response.data.token); //登录成功后将token存储在cookie之中
-            commit("SET_TOKEN", data.token);
-            resolve();
-          })
-          .catch(error => {
-            reject(error);
-          });
-      });
     },
     toLogin: function() {
       //一般要跟后端了解密码的加密规则
@@ -84,17 +65,18 @@ export default {
       // }
 
       //设置在登录状态
-      this.isLoging = true;
+      // this.isLoging = true;
 
       //请求后端
-      this.axi.post("/user0", this.user).then(
-        response => {
-          console.log(JSON.stringify(response));
-          if(response.result){
+      this.axi.post("/login", this.user).then(
+        (response) => {
+          // console.log(JSON.stringify(response));
+          if(response.retCode==1){
             //如果登录成功则保存登录状态并设置有效期
-            let expireDays = 1000 * 60 * 60 * 24 * 15;
+            // let expireDays = 1000 * 60 * 60 * 2;//4 * 15;
             // this.setCookie('session', response.result, expireDays);
-            this.cookies.set('session', response.result, expireDays);
+            // this.cookies.set('session', response.user, expireDays);
+            // req.session.user=response.user;
             //跳转
             this.$router.push({path:'/newIndex'});
           }
