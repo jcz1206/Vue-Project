@@ -12,7 +12,7 @@
         background-color: $fontColor;
     }
     .prodcon {
-        width: 570px;
+        width: calc(100% - 2.4rem); //570px;
         height: 180px;
         padding-left: 3px;
         /*no*/
@@ -48,7 +48,9 @@
         height: 80px;
         line-height: 80px;
         color: $mainColor;
-        text-align: center;
+        // text-align: center;
+        text-align: right;
+        padding-right: 40px;
         i {
             font-size: 48px;
         }

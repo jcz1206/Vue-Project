@@ -31,7 +31,7 @@ export default {
           if(response.retCode==1){
             console.log("已登录");
             //跳转
-            this.$router.push({path:'/newIndex'});
+            // this.$router.push({path:'/newIndex'});
           }else{
             console.log("请登录");
             this.$router.push({path:'/newlogin'});
